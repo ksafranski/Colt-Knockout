@@ -2,6 +2,10 @@ define(["knockout"], function(ko){
     
     var test = {
         
+        dependencies: {
+            testmodel: 'models/test'
+        },
+        
         events: {
             // None right now...
         },
@@ -16,15 +20,10 @@ define(["knockout"], function(ko){
             // Render template
             Colt.render(this);
             
-            // Setup KO Model
-            var TodoModel = function(t, c) {
-                this.title = ko.observable(t);
-                this.content = ko.observable(c);
-                return this;
-            };
+            
             
             // Apply bindings and instantiate model
-            ko.applyBindings(new TodoModel("My Title", "Some content goes here..."));
+            ko.applyBindings(new testmodel("My Title", "Some content goes here..."));
             
         }
         
