@@ -20,8 +20,6 @@ define(["knockout"], function(ko){
             // Render template
             Colt.render(this);
             
-            
-            
             // Apply bindings and instantiate model
             ko.applyBindings(new testmodel("My Title", "Some content goes here..."));
             
